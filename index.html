@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loot Rush RNG</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="left-panel card">
+        <header>
+          <h1>Loot Rush RNG</h1>
+          <p id="stats"></p>
+        </header>
+
+        <section class="source-list" id="source-list"></section>
+
+        <section class="reveal" id="reveal-panel">
+          <h2 id="reveal-status">Pick a source and open for loot!</h2>
+          <p id="reveal-hint">Sell drops for cash, upgrade tiers, and increase luck to chase Mythics.</p>
+        </section>
+      </section>
+
+      <section class="right-panel card">
+        <header>
+          <h2>Inventory</h2>
+          <p>Manage drops, sell items, and optimize progression.</p>
+        </header>
+
+        <ul id="inventory-list" class="inventory-list"></ul>
+
+        <div class="buttons">
+          <button id="sell-selected">Sell Selected</button>
+          <button id="sell-low">Sell All Commons/Rares</button>
+        </div>
+
+        <button id="upgrade-luck" class="full">Upgrade Luck</button>
+        <p id="inventory-value"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

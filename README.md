@@ -1,6 +1,6 @@
-# Loot Rush RNG (Tkinter)
+# Loot Rush RNG (Browser Edition)
 
-A GUI-based RNG game where players open **Card Packs**, **Treasure Chests**, and **Gun Cases** to collect items with rarities:
+A GUI-first RNG game you can run in your browser where players open **Card Packs**, **Treasure Chests**, and **Gun Cases** to collect items with rarities:
 
 - Common
 - Rare
@@ -8,20 +8,29 @@ A GUI-based RNG game where players open **Card Packs**, **Treasure Chests**, and
 - Legendary
 - Mythic
 
-Each item has a sell value. Sell items to earn currency, then upgrade sources and luck to improve rare drop chances.
+Each item has a sell value. Sell items to earn currency, then upgrade loot sources and luck to chase bigger drops.
 
 ## Features
 
-- Fully GUI-driven loop with animated reveal phases.
+- Browser-based UI with animated opening/reveal effects.
 - Three loot source types with independent tier progression.
-- Inventory management with sell selected / auto-sell low-tier items.
-- Luck upgrades that shift weighted rarity outcomes over time.
-- Dynamic rarity highlights and drop chance readouts.
+- Rarity system with color highlights and live Legendary/Mythic drop chance display.
+- Inventory management: select-and-sell or auto-sell Common/Rare items.
+- Progression loop with source tier upgrades and luck upgrades.
 
-## Run
+## Run in your browser
+
+Option 1 (quick):
+- Open `index.html` directly in a browser.
+
+Option 2 (recommended local server):
 
 ```bash
-python3 game.py
+python3 -m http.server 8000
 ```
 
-No third-party dependencies are required (uses Python standard library `tkinter`).
+Then open:
+
+- `http://localhost:8000`
+
+No third-party dependencies are required.

@@ -1,0 +1,117 @@
+:root {
+  --bg: #10131a;
+  --card: #1a1f2b;
+  --panel: #121725;
+  --text: #f4f7ff;
+  --muted: #9da8c3;
+  --border: #2a3144;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: radial-gradient(circle at top, #1b2233, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+  padding: 14px;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+h1, h2 { margin: 0 0 8px; }
+p { margin: 0 0 8px; color: var(--muted); }
+
+.source-box {
+  background: #141a26;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.source-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  background: #2f6feb;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.reveal {
+  margin-top: 16px;
+  min-height: 220px;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.reveal h2 { margin-bottom: 8px; }
+
+.inventory-list {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0f1320;
+  max-height: 480px;
+  overflow-y: auto;
+}
+
+.inventory-list li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #1f2635;
+  cursor: pointer;
+}
+
+.inventory-list li:last-child { border-bottom: none; }
+.inventory-list li.selected { background: #2f6feb66; }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.full { width: 100%; }
+
+.rare-Common { color: #cfd8dc; }
+.rare-Rare { color: #64b5f6; }
+.rare-Epic { color: #ba68c8; }
+.rare-Legendary { color: #ffb74d; }
+.rare-Mythic { color: #ef5350; }
+
+@media (max-width: 980px) {
+  .app { grid-template-columns: 1fr; }
+}
